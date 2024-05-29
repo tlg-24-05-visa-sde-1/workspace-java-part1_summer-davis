@@ -1,0 +1,17 @@
+Write a class definition that contains a method that returns a random integer between 1 and 20 (inclusive).
+
+Write a client main-class that invokes this method 1000 times and records each result.
+
+After the 1000 invocations, the client should output the results, showing how many occurrences of each number there were:
+
+1  was returned 43 times
+2  was returned 57 times
+3  was returned 50 times
+.
+.
+.
+20 was returned 44 times
+
+Your results output can look any way you want it, just make it clear.
+
+We haven't studied the java.util collections classes yet, but we have studied arrays (that's a hint).

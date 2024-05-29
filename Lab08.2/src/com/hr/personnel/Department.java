@@ -65,7 +65,12 @@ public class Department {
     for (int i = 0; i < currentIndex; i++) {
       // IF employees[i] is actually referring to a SalariedEmployee object,
       // "downcast" the Employee reference to more specific type "Salaried Employee"
-      if (employees[i] instanceof SalariedEmployee) {
+      // then we can call SalariedEmployee-specific methods like takeVacation()
+      if (employees[i] instanceof SalariedEmployee) {  // IS-A match
+        // downcast-and-method call in one shot
+        // ((SalariedEmployee) employees[i]).takeVacation();
+
+        // explicitly create a NEW reference of type SalariedEmployee (semp)
         SalariedEmployee semp = (SalariedEmployee) employees[i];
         semp.takeVacation();
       }

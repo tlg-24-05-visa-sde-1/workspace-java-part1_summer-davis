@@ -8,6 +8,7 @@ public class SalariedEmployee extends Employee {
 
   // properties/fields
   private double salary;
+  private static final double STANDARD_DEDUCTION = 10_000.0;
 
   // constructors
   public SalariedEmployee() {
@@ -31,10 +32,15 @@ public class SalariedEmployee extends Employee {
     System.out.println(getName() + " is paid salary " + getSalary());
   }
 
-  @Override // interface TaxPayer
+  @Override // interface TaxPayer - abstract method - I MUST implement it myself
   public void payTaxes() {
     double taxes = getSalary() * TaxPayer.SALARIED_TAX_RATE;
     System.out.printf("%s paid taxes of %,.2f\n", getName(), taxes);
+  }
+
+  @Override // interface TaxPayer - default method - I OPT to override it
+  public double getStandardDeduction() {
+    return STANDARD_DEDUCTION;
   }
 
   public void takeVacation() {

@@ -9,6 +9,7 @@
 package com.hr.personnel;
 
 import java.time.LocalDate;
+import gov.irs.IllegalWageException;
 
 public class HourlyEmployee extends Employee {
     // class or "static" variables are listed first, up here, in the class-wide common area
@@ -27,7 +28,7 @@ public class HourlyEmployee extends Employee {
     }
 
     public HourlyEmployee(String name, LocalDate hireDate, double rate, double hours)
-    throws IllegalArgumentException {
+    throws IllegalWageException {
         this(name, hireDate);   // delegate to neighboring ctor for name, hireDate
         setRate(rate);          // handle rate here, by delegating to setter
         setHours(hours);        // handle hours here, by delegating to setter
@@ -50,9 +51,9 @@ public class HourlyEmployee extends Employee {
         return rate;
     }
 
-    public void setRate(double rate) throws IllegalArgumentException {
+    public void setRate(double rate) throws IllegalWageException {
         if (rate < FEDERAL_MINIMUM_WAGE) {
-            throw new IllegalArgumentException("Illegal wage: " + rate + ". Federal minimum wage is " + FEDERAL_MINIMUM_WAGE);
+            throw new IllegalWageException("Illegal wage: " + rate + ". Federal minimum wage is " + FEDERAL_MINIMUM_WAGE);
         } else {
             this.rate = rate;
         }

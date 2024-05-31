@@ -1,15 +1,36 @@
 package edu.geometry;
 
-abstract class Shape {
+public abstract class Shape {
 
-    // static fields/methods
+  // static fields/methods
 
-    // properties
+  // properties
+  private String unitOfMeasurement = "in";
 
-    // business methods
-    abstract public double getArea();
+  // constructors
+  public Shape() {
+    super(); // automatically calls Object
+  }
 
-    // accessor methods
+  public Shape(String unitOfMeasurement) {
+    setUnitOfMeasurement(unitOfMeasurement);
+  }
 
-    // toString()
+  // business methods
+  public abstract double getArea();
+
+  // accessor methods
+  public String getUnitOfMeasurement() {
+    return unitOfMeasurement;
+  }
+
+  public void setUnitOfMeasurement(String unitOfMeasurement) {
+    this.unitOfMeasurement = unitOfMeasurement;
+  }
+
+  // toString()
+  public String toString() {
+    return String.format(
+        "%s area: %.2f %s", getClass().getSimpleName(), getArea(), getUnitOfMeasurement());
+  }
 }

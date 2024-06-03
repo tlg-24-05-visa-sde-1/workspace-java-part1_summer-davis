@@ -12,10 +12,6 @@ public abstract class Shape {
     super(); // automatically calls Object
   }
 
-  public Shape(String unitOfMeasurement) {
-    setUnitOfMeasurement(unitOfMeasurement);
-  }
-
   // business methods
   public abstract double getArea();
 

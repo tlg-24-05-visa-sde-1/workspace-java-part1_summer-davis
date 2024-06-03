@@ -12,11 +12,6 @@ public class Circle extends Shape {
     this.radius = radius;
   }
 
-  public Circle(double radius, String unitOfMeasurement) {
-    this(radius);
-    setUnitOfMeasurement(unitOfMeasurement);
-  }
-
   // business methods
 
   @Override

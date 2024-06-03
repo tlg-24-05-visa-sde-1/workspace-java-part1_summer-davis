@@ -13,12 +13,7 @@ public class Triangle extends Shape {
   public Triangle(double side1, double side2, double angle) {
     this.side1 = side1;
     this.side2 = side2;
-    this.angle = angle;
-  }
-
-  public Triangle(double side1, double side2, double angle, String unitOfMeasurement) {
-    this(side1, side2, angle);
-    setUnitOfMeasurement(unitOfMeasurement);
+    this.angle = Math.sin(Math.toRadians(angle));
   }
 
   // business methods

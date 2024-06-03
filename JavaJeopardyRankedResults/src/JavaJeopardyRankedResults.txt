@@ -1,0 +1,37 @@
+Challenge: make a new Map that has the same entries as this Map,
+but the new map is ordered by decreasing dollar amount, e.g.,
+  Joseph          1700
+  Kerri           1700
+  Josh            1200
+  Chris           1100
+  Justin          1100
+  ...
+
+You do not have to "break the tie" between entries with the same dollar value,
+just ensure that the Map is in order of decreasing dollar amount.
+
+
+Java Jeopardy Results
+=====================
+Adrian            700
+Andrew           1000
+Bikash            900
+Chas              900
+Chathula          400
+Chris            1100
+Hongyi            200
+Jasmine           500
+Jason             300
+Jauric            900
+Joe               500
+Joseph           1700
+Josh             1200
+Justin           1100
+Karlo             800
+Kerri            1700
+Nick              500
+Peng              500
+Phillipe         1000
+Pierre            200
+Stephen           600
+Yun               400

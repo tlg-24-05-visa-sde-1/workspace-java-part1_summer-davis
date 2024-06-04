@@ -29,6 +29,6 @@ class ShapeClient {
     }
 
     // print total area
-    System.out.printf("Total area: %.2f in", totalArea);
+    System.out.printf("Total area: %.2f in^2", totalArea);
   }
 }

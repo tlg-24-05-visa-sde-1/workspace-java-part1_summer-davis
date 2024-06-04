@@ -5,7 +5,7 @@ public abstract class Shape {
   // static fields/methods
 
   // properties
-  private String unitOfMeasurement = "in";
+  private String unitOfMeasurement = "inches^2";
 
   // constructors
   public Shape() {
